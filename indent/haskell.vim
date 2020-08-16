@@ -19,16 +19,16 @@ let b:did_indent = 1
 
 if !exists('g:haskell_indent_if')
   " if x
-  " >>>then ...
-  " >>>else ...
-  let g:haskell_indent_if = 3
+  " >>>>then ...
+  " >>>>else ...
+  let g:haskell_indent_if = 4
 endif
 
 if !exists('g:haskell_indent_case')
   " case xs of
-  " >>[]     -> ...
-  " >>(y:ys) -> ...
-  let g:haskell_indent_case = 2
+  " >>>>[]     -> ...
+  " >>>>(y:ys) -> ...
+  let g:haskell_indent_case = 4
 endif
 
 if !exists('g:haskell_indent_let')
@@ -42,26 +42,26 @@ endif
 
 if !exists('g:haskell_indent_where')
   " where f :: Int -> Int
-  " >>>>>>f x = x
-  let g:haskell_indent_where = 6
+  " >>>>f x = x
+  let g:haskell_indent_where = 4
 endif
 
 if !exists('g:haskell_indent_do')
   " do x <- a
-  " >>>y <- b
-  let g:haskell_indent_do = 3
+  " >>>>y <- b
+  let g:haskell_indent_do = 4
 endif
 
 if !exists('g:haskell_indent_in')
   " let x = 1
-  " >in x
-  let g:haskell_indent_in = 1
+  " >>>>in x
+  let g:haskell_indent_in = 4
 endif
 
 if !exists('g:haskell_indent_guard')
   " f x y
-  " >>|
-  let g:haskell_indent_guard = 2
+  " >>>>|
+  let g:haskell_indent_guard = 4
 endif
 
 setlocal indentexpr=GetHaskellIndent()
