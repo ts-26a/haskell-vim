@@ -93,6 +93,7 @@ syn region haskellString start=+"+ skip=+\\\\\|\\"+ end=+"+
 syn match haskellIdentifier "[_a-z][a-zA-z0-9_']*" contained
 syn match haskellChar "\<'[^'\\]'\|'\\.'\|'\\u[0-9a-fA-F]\{4}'\>"
 syn match haskellType "\<[A-Z][a-zA-Z0-9_']*\>"
+syn keyword hsType Int String Char Just Nothing Maybe Float Double Bool
 syn region haskellBlockComment start="{-" end="-}"
   \ contains=
   \ haskellBlockComment,
@@ -158,6 +159,7 @@ highlight def link haskellPreProc PreProc
 highlight def link haskellAssocType Type
 highlight def link haskellQuotedType Type
 highlight def link haskellType Type
+highlight def link hsType Type
 highlight def link haskellImportKeywords Include
 if get(g:, 'haskell_classic_highlighting', 0)
   highlight def link haskellDeclKeyword Keyword
