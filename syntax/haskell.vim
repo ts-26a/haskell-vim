@@ -94,6 +94,7 @@ syn match haskellIdentifier "[_a-z][a-zA-z0-9_']*" contained
 syn match haskellChar "\<'[^'\\]'\|'\\.'\|'\\u[0-9a-fA-F]\{4}'\>"
 syn match haskellType "\<[A-Z][a-zA-Z0-9_']*\>"
 syn keyword hsType Int String Char Just Nothing Maybe Float Double Bool
+syn keyword haskellConstant True False
 syn region haskellBlockComment start="{-" end="-}"
   \ contains=
   \ haskellBlockComment,
@@ -131,6 +132,7 @@ if get(g:, 'haskell_enable_pattern_synonyms', 0)
   syn keyword haskellPatternKeyword pattern
 endif
 
+highlight def link haskellConstant Constant
 highlight def link haskellBottom Macro
 highlight def link haskellTH Boolean
 highlight def link haskellIdentifier Identifier
